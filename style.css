@@ -1,0 +1,144 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+.container {
+    background-color: white;
+    min-width: 708px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 3px solid black;
+    min-height: 728px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headText > h2, .main-tasks > h2 {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 28px;
+    font-family:cursive;
+    font-weight: 400;
+    text-transform:uppercase;
+}
+.main-tasks > h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    text-decoration: line-through;
+}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.tasks {
+    margin-left: 92px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.tasks > li {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 100;
+    font-family:cursive;
+    text-transform: uppercase;
+    list-style:circle;
+    user-select: none;
+}
+
+.bold, .count {
+    color: red;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.quote {
+    text-decoration: none;
+    margin-top: 64px;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: 200;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#time {
+    text-align: center;
+    font-family: cursive;
+    font-weight: 200;
+    font-size: 20px;
+    
+}
+
+hr {
+    margin-top:8px
+}
+
+@media (max-width: 475px) {
+    .container {
+        min-width: 0px;
+        max-width: 475px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tasks {
+        margin-left: 9% !important;
+        gap: 24px;
+        margin-top: 48px;
+        
+    }
+    .tasks > li {
+        font-size: 17px;
+        
+    }
+
+    .vertical-text {
+        writing-mode:initial;
+        text-orientation: sideways ;
+    }
+
+        .headText>h2,
+        .main-tasks>h2 {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+                .main-tasks>h2 {
+                    font-size: 17px;
+                    margin-bottom: 4px;
+                    text-decoration: line-through;
+                }
+        .quote {
+            font-size: 17px;
+            margin: 8px;
+            margin-top: 32px;
+        }
+}
