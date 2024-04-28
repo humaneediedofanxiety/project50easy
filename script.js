@@ -1,6 +1,7 @@
 // Time for the Functionality
 let taskItems = document.querySelectorAll("li");
 let count = document.getElementsByClassName('count')[0];
+let sleep = document.getElementById('sleep');
 
 let countIndex = localStorage.getItem('countIn')
 count.innerHTML = countIndex;
@@ -8,6 +9,17 @@ if (countIndex === null) {
     count.innerHTML = '0'
 }
 
+if (countIndex <= 7) {
+    sleep.innerHTML = 'To Sleep Before 3:00 AM'
+} else if (countIndex <= 14) {
+    sleep.innerHTML = 'To Sleep Before 2:30 AM'
+} else if (countIndex <= 21) {
+    sleep.innerHTML = 'To Sleep Before 2:00 AM'
+} else if (countIndex <= 28) {
+    sleep.innerHTML = 'To Sleep Before 1:00 AM'
+} else if (countIndex >= 28) {
+    sleep.innerHTML = 'To Sleep Before 12:00 AM'
+}
 
 for (let i = 0; i < taskItems.length; i++) {
     let task = taskItems[i].getAttribute('key')
